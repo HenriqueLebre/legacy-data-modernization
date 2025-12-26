@@ -1,0 +1,15 @@
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\bin\Debug\net8.0\LegacyDataAccess.Dapper.deps.json
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\bin\Debug\net8.0\LegacyDataAccess.Dapper.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\bin\Debug\net8.0\LegacyDataAccess.Dapper.pdb
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\bin\Debug\net8.0\LegacyDataAccess.Core.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\bin\Debug\net8.0\LegacyDataAccess.Core.pdb
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.csproj.AssemblyReference.cache
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.AssemblyInfoInputs.cache
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.AssemblyInfo.cs
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.csproj.CoreCompileInputs.cache
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDa.6B4CCC38.Up2Date
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\refint\LegacyDataAccess.Dapper.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.pdb
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\ref\LegacyDataAccess.Dapper.dll
