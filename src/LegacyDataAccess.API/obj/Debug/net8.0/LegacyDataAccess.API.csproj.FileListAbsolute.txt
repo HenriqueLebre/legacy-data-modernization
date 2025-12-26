@@ -38,3 +38,6 @@ D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-moderniza
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.API\obj\Debug\net8.0\LegacyDataAccess.API.pdb
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.API\obj\Debug\net8.0\LegacyDataAccess.API.genruntimeconfig.cache
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.API\obj\Debug\net8.0\ref\LegacyDataAccess.API.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.API\obj\Debug\net8.0\LegacyDataAccess.API.sourcelink.json

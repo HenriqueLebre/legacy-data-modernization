@@ -13,3 +13,4 @@ D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-moderniza
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\refint\LegacyDataAccess.Dapper.dll
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.pdb
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\ref\LegacyDataAccess.Dapper.dll
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Dapper\obj\Debug\net8.0\LegacyDataAccess.Dapper.sourcelink.json
