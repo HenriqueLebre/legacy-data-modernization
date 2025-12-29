@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.22" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
+    <ProjectReference Include="..\LegacyDataAccess.Core\LegacyDataAccess.Core.csproj" />
+    <ProjectReference Include="..\LegacyDataAccess.Dapper\LegacyDataAccess.Dapper.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LegacyDataAccess.Core\LegacyDataAccess.Core.csproj" />
-    <ProjectReference Include="..\LegacyDataAccess.Dapper\LegacyDataAccess.Dapper.csproj" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
 </Project>

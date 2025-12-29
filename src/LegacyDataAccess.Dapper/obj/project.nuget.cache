@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FjnH3EjI+B0=",
+  "dgSpecHash": "SZhAErkOzm0=",
   "success": true,
   "projectFilePath": "D:\\dev\\legacy-data-modernization\\legacy-data-modernization\\legacy-data-modernization\\src\\LegacyDataAccess.Dapper\\LegacyDataAccess.Dapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henrique Lebre\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
+    "C:\\Users\\Henrique Lebre\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.1\\microsoft.extensions.configuration.10.0.1.nupkg.sha512",
     "C:\\Users\\Henrique Lebre\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.1\\microsoft.extensions.configuration.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\Henrique Lebre\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.1\\microsoft.extensions.configuration.binder.10.0.1.nupkg.sha512",
     "C:\\Users\\Henrique Lebre\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Henrique Lebre\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Henrique Lebre\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.1\\microsoft.extensions.primitives.10.0.1.nupkg.sha512",

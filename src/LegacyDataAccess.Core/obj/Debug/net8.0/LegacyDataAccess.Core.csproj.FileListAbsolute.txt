@@ -5,8 +5,8 @@ D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-moderniza
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.AssemblyInfoInputs.cache
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.AssemblyInfo.cs
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.csproj.CoreCompileInputs.cache
+D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.sourcelink.json
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.dll
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\refint\LegacyDataAccess.Core.dll
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.pdb
 D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\ref\LegacyDataAccess.Core.dll
-D:\dev\legacy-data-modernization\legacy-data-modernization\legacy-data-modernization\src\LegacyDataAccess.Core\obj\Debug\net8.0\LegacyDataAccess.Core.sourcelink.json

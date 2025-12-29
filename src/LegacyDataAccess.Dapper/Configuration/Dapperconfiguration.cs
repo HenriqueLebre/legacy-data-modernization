@@ -1,12 +1,8 @@
-using System.Data;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 
 namespace LegacyDataAccess.Dapper.Configuration;
 
-/// <summary>
-/// Manages database connections and Dapper configuration
-/// </summary>
 public class DapperConfiguration
 {
     private readonly string _connectionString;
@@ -21,7 +17,6 @@ public class DapperConfiguration
         _commandTimeout = configuration.GetValue<int>("Dapper:CommandTimeout", 30);
         _maxRetryCount = configuration.GetValue<int>("Dapper:MaxRetryCount", 3);
         
-        // Configure Npgsql to map snake_case to PascalCase
         ConfigureNpgsql();
     }
 
@@ -36,24 +31,15 @@ public class DapperConfiguration
 
     private static void ConfigureNpgsql()
     {
-        // Enable legacy timestamp behavior for better compatibility
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-        
-        // Configure default type mappings
-        Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+        global::Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
     }
 
-    /// <summary>
-    /// Creates a new database connection
-    /// </summary>
     public NpgsqlConnection CreateConnection()
     {
         return new NpgsqlConnection(_connectionString);
     }
 
-    /// <summary>
-    /// Creates and opens a database connection
-    /// </summary>
     public async Task<NpgsqlConnection> CreateConnectionAsync(CancellationToken cancellationToken = default)
     {
         var connection = new NpgsqlConnection(_connectionString);
