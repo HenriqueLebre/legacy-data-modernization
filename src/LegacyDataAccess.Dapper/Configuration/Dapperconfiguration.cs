@@ -11,12 +11,12 @@ public class DapperConfiguration
 
     public DapperConfiguration(IConfiguration configuration)
     {
-        _connectionString = configuration.GetConnectionString("DefaultConnection") 
+        _connectionString = configuration.GetConnectionString("DefaultConnection")
             ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-        
+
         _commandTimeout = configuration.GetValue<int>("Dapper:CommandTimeout", 30);
         _maxRetryCount = configuration.GetValue<int>("Dapper:MaxRetryCount", 3);
-        
+
         ConfigureNpgsql();
     }
 
@@ -25,7 +25,7 @@ public class DapperConfiguration
         _connectionString = connectionString;
         _commandTimeout = 30;
         _maxRetryCount = 3;
-        
+
         ConfigureNpgsql();
     }
 
@@ -43,7 +43,7 @@ public class DapperConfiguration
     public async Task<NpgsqlConnection> CreateConnectionAsync(CancellationToken cancellationToken = default)
     {
         var connection = new NpgsqlConnection(_connectionString);
-        
+
         var retryCount = 0;
         while (true)
         {

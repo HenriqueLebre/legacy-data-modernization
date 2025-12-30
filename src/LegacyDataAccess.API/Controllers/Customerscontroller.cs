@@ -49,7 +49,7 @@ public class CustomersController : ControllerBase
     {
         if (string.IsNullOrWhiteSpace(q))
             return BadRequest(new { message = "Search term is required" });
-        
+
         var customers = await _repository.SearchAsync(q, cancellationToken);
         return Ok(customers);
     }
@@ -59,7 +59,7 @@ public class CustomersController : ControllerBase
     {
         if (await _repository.CodeExistsAsync(customer.Code, cancellationToken))
             return Conflict(new { message = $"Customer code '{customer.Code}' already exists" });
-        
+
         var id = await _repository.CreateAsync(customer, cancellationToken);
         return CreatedAtAction(nameof(GetById), new { id }, new { id });
     }
@@ -69,7 +69,7 @@ public class CustomersController : ControllerBase
     {
         if (!await _repository.ExistsAsync(id, cancellationToken))
             return NotFound(new { message = $"Customer {id} not found" });
-        
+
         await _repository.UpdateAsync(id, customer, cancellationToken);
         return NoContent();
     }
@@ -88,7 +88,7 @@ public class CustomersController : ControllerBase
     {
         if (!await _repository.ExistsAsync(id, cancellationToken))
             return NotFound(new { message = $"Customer {id} not found" });
-        
+
         var balance = await _repository.GetBalanceAsync(id, cancellationToken);
         return Ok(new { customerId = id, balance });
     }

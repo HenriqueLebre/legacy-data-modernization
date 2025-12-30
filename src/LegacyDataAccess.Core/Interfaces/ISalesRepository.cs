@@ -12,7 +12,7 @@ public interface ISalesRepository
     Task<IEnumerable<DailySalesDto>> GetDailySalesAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default);
     Task<IEnumerable<TopSellingProductDto>> GetTopSellingProductsAsync(DateTime startDate, DateTime endDate, int top = 10, CancellationToken cancellationToken = default);
     Task<IEnumerable<TopCustomerDto>> GetTopCustomersAsync(DateTime startDate, DateTime endDate, int top = 10, CancellationToken cancellationToken = default);
-    
+
     // Aggregates
     Task<decimal> GetTotalSalesAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default);
     Task<int> GetSalesCountAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default);

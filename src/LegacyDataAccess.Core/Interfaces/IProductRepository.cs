@@ -15,12 +15,12 @@ public interface IProductRepository
     Task<IEnumerable<ProductListDto>> SearchAsync(string searchTerm, CancellationToken cancellationToken = default);
     Task<IEnumerable<ProductListDto>> GetByCategoryAsync(string category, CancellationToken cancellationToken = default);
     Task<IEnumerable<ProductListDto>> GetLowStockAsync(CancellationToken cancellationToken = default);
-    
+
     // Write operations
     Task<int> CreateAsync(ProductDto product, CancellationToken cancellationToken = default);
     Task<bool> UpdateAsync(int id, ProductDto product, CancellationToken cancellationToken = default);
     Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default);
-    
+
     // Stock operations
     Task<bool> UpdateStockAsync(int id, decimal quantity, string operation, CancellationToken cancellationToken = default);
 }
