@@ -12,7 +12,7 @@ RUN dotnet restore src/LegacyDataAccess.API/LegacyDataAccess.API.csproj
 COPY src/ ./src/
 
 RUN dotnet publish src/LegacyDataAccess.API/LegacyDataAccess.API.csproj \
-    -c Release -o /app/publish --no-restore
+    -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
 WORKDIR /app
