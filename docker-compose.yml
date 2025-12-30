@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: erp_user
       POSTGRES_PASSWORD: erp_secure_password
     ports:
-      - "5433:5433"
+      - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./scripts/db/init.sql:/docker-entrypoint-initdb.d/01-init.sql

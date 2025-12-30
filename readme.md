@@ -85,3 +85,132 @@ DbCloseApi("CLI")
 ## License
 
 MIT License - See [LICENSE](LICENSE) for details.
+
+---
+
+## 🧪 Testing the API
+
+### Prerequisites
+
+1. Start PostgreSQL:
+```bash
+docker-compose up -d postgres
+```
+
+2. Run the API:
+```bash
+dotnet run --project src/LegacyDataAccess.API
+```
+
+3. Access Swagger UI: http://localhost:5246/swagger
+
+---
+
+### Health Checks
+```bash
+# Health status
+curl http://localhost:5246/health
+
+# Readiness probe
+curl http://localhost:5246/health/ready
+
+# Liveness probe
+curl http://localhost:5246/health/live
+```
+
+---
+
+### Customers API
+
+#### Create Customer
+```bash
+curl -X POST http://localhost:5246/api/customers \
+  -H "Content-Type: application/json" \
+  -d '{
+    "code": "CLI-001",
+    "name": "Empresa Teste Ltda",
+    "email": "contato@teste.com.br",
+    "phone": "(11) 99999-9999",
+    "document": "12.345.678/0001-90",
+    "address": "Rua Teste, 123",
+    "city": "São Paulo",
+    "state": "SP",
+    "zipCode": "01234-567",
+    "creditLimit": 10000.00
+  }'
+```
+
+#### Get All Customers
+```bash
+curl http://localhost:5246/api/customers
+```
+
+#### Get Customer by ID
+```bash
+curl http://localhost:5246/api/customers/1
+```
+
+#### Get Customer by Code
+```bash
+curl http://localhost:5246/api/customers/code/CLI-001
+```
+
+#### Search Customers
+```bash
+curl "http://localhost:5246/api/customers/search?q=Teste"
+```
+
+#### Update Customer
+```bash
+curl -X PUT http://localhost:5246/api/customers/1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "code": "CLI-001",
+    "name": "Empresa Atualizada Ltda",
+    "email": "novo@teste.com.br",
+    "creditLimit": 15000.00
+  }'
+```
+
+#### Delete Customer
+```bash
+curl -X DELETE http://localhost:5246/api/customers/1
+```
+
+#### Get Customer Balance
+```bash
+curl http://localhost:5246/api/customers/1/balance
+```
+
+#### Update Customer Balance
+```bash
+curl -X POST http://localhost:5246/api/customers/1/balance \
+  -H "Content-Type: application/json" \
+  -d '{"amount": 500.00}'
+```
+
+---
+
+### Reports API
+
+#### Monthly Sales Report
+```bash
+curl "http://localhost:5246/api/reports/sales/monthly/2024/12"
+```
+
+#### Daily Sales
+```bash
+curl "http://localhost:5246/api/reports/sales/daily?startDate=2024-01-01&endDate=2024-12-31"
+```
+
+#### Top Selling Products
+```bash
+curl "http://localhost:5246/api/reports/products/top-selling?startDate=2024-01-01&endDate=2024-12-31&top=10"
+```
+
+#### Top Customers
+```bash
+curl "http://localhost:5246/api/reports/customers/top?startDate=2024-01-01&endDate=2024-12-31&top=10"
+```
+
+---

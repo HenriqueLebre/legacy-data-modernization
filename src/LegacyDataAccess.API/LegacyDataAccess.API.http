@@ -1,6 +1,181 @@
-@LegacyDataAccess.API_HostAddress = http://localhost:5246
+###############################################################################
+# Legacy Data Access API - HTTP Requests
+# 
+# Use with VS Code REST Client extension
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+###############################################################################
 
-GET {{LegacyDataAccess.API_HostAddress}}/weatherforecast/
-Accept: application/json
+@baseUrl = http://localhost:5246
 
-###
+###############################################################################
+# HEALTH CHECKS
+###############################################################################
+
+### Health Check - Overall Status
+GET {{baseUrl}}/health
+
+### Health Check - Readiness Probe (Kubernetes)
+GET {{baseUrl}}/health/ready
+
+### Health Check - Liveness Probe (Kubernetes)
+GET {{baseUrl}}/health/live
+
+###############################################################################
+# CUSTOMERS - READ OPERATIONS
+###############################################################################
+
+### Get All Customers
+GET {{baseUrl}}/api/customers
+
+### Get All Customers (including inactive)
+GET {{baseUrl}}/api/customers?includeInactive=true
+
+### Get Customer by ID
+GET {{baseUrl}}/api/customers/1
+
+### Get Customer by Code
+GET {{baseUrl}}/api/customers/code/CLI-001
+
+### Search Customers
+GET {{baseUrl}}/api/customers/search?q=Teste
+
+### Get Customer Balance
+GET {{baseUrl}}/api/customers/1/balance
+
+###############################################################################
+# CUSTOMERS - WRITE OPERATIONS
+###############################################################################
+
+### Create Customer
+POST {{baseUrl}}/api/customers
+Content-Type: application/json
+
+{
+  "code": "CLI-001",
+  "name": "Empresa Teste Ltda",
+  "email": "contato@teste.com.br",
+  "phone": "(11) 99999-9999",
+  "document": "12.345.678/0001-90",
+  "address": "Rua Teste, 123",
+  "city": "São Paulo",
+  "state": "SP",
+  "zipCode": "01234-567",
+  "creditLimit": 10000.00
+}
+
+### Create Customer 2
+POST {{baseUrl}}/api/customers
+Content-Type: application/json
+
+{
+  "code": "CLI-002",
+  "name": "Comércio Silva & Filhos",
+  "email": "silva@comercio.com.br",
+  "phone": "(11) 88888-8888",
+  "document": "23.456.789/0001-12",
+  "address": "Av. Brasil, 500",
+  "city": "São Paulo",
+  "state": "SP",
+  "zipCode": "04567-890",
+  "creditLimit": 25000.00
+}
+
+### Create Customer 3
+POST {{baseUrl}}/api/customers
+Content-Type: application/json
+
+{
+  "code": "CLI-003",
+  "name": "Indústria Beta Ltda",
+  "email": "compras@industriabeta.com.br",
+  "phone": "(19) 3456-7890",
+  "document": "34.567.890/0001-23",
+  "address": "Rod. Anhanguera, km 100",
+  "city": "Campinas",
+  "state": "SP",
+  "zipCode": "13100-000",
+  "creditLimit": 100000.00
+}
+
+### Update Customer
+PUT {{baseUrl}}/api/customers/1
+Content-Type: application/json
+
+{
+  "code": "CLI-001",
+  "name": "Empresa Teste Atualizada Ltda",
+  "email": "novo@teste.com.br",
+  "phone": "(11) 77777-7777",
+  "document": "12.345.678/0001-90",
+  "address": "Rua Nova, 456",
+  "city": "São Paulo",
+  "state": "SP",
+  "zipCode": "01234-567",
+  "creditLimit": 15000.00
+}
+
+### Delete Customer (Soft Delete)
+DELETE {{baseUrl}}/api/customers/1
+
+### Update Customer Balance (Add)
+POST {{baseUrl}}/api/customers/1/balance
+Content-Type: application/json
+
+{
+  "amount": 500.00
+}
+
+### Update Customer Balance (Subtract)
+POST {{baseUrl}}/api/customers/1/balance
+Content-Type: application/json
+
+{
+  "amount": -200.00
+}
+
+###############################################################################
+# REPORTS
+###############################################################################
+
+### Monthly Sales Report - December 2024
+GET {{baseUrl}}/api/reports/sales/monthly/2024/12
+
+### Monthly Sales Report - Current Month
+GET {{baseUrl}}/api/reports/sales/monthly/2025/1
+
+### Daily Sales - Last 30 days
+GET {{baseUrl}}/api/reports/sales/daily?startDate=2024-12-01&endDate=2024-12-31
+
+### Daily Sales - Full Year
+GET {{baseUrl}}/api/reports/sales/daily?startDate=2024-01-01&endDate=2024-12-31
+
+### Top Selling Products - Top 5
+GET {{baseUrl}}/api/reports/products/top-selling?startDate=2024-01-01&endDate=2024-12-31&top=5
+
+### Top Selling Products - Top 10
+GET {{baseUrl}}/api/reports/products/top-selling?startDate=2024-01-01&endDate=2024-12-31&top=10
+
+### Top Customers - Top 5
+GET {{baseUrl}}/api/reports/customers/top?startDate=2024-01-01&endDate=2024-12-31&top=5
+
+### Top Customers - Top 10
+GET {{baseUrl}}/api/reports/customers/top?startDate=2024-01-01&endDate=2024-12-31&top=10
+
+### Sales Summary
+GET {{baseUrl}}/api/reports/sales/summary?startDate=2024-01-01&endDate=2024-12-31
+
+###############################################################################
+# TEST SCENARIOS
+###############################################################################
+
+### Scenario: Test 404 - Customer Not Found
+GET {{baseUrl}}/api/customers/99999
+
+### Scenario: Test 404 - Code Not Found
+GET {{baseUrl}}/api/customers/code/XXX-999
+
+### Scenario: Test 400 - Invalid Month
+GET {{baseUrl}}/api/reports/sales/monthly/2024/13
+
+### Scenario: Test Empty Search
+GET {{baseUrl}}/api/customers/search?q=XYZNOTEXIST
